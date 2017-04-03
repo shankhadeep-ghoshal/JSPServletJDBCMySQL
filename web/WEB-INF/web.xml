@@ -16,9 +16,21 @@
         <jsp-file>/InsertEmployee.jsp</jsp-file>
         <init-param>
             <param-name>Ins</param-name>
-            <param-value></param-value>
+            <param-value> </param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>SelectTable</servlet-name>
+        <jsp-file>/Pages/SelectTable.jsp</jsp-file>
+        <init-param>
+            <param-name>sel</param-name>
+            <param-value> </param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectTable</servlet-name>
+        <url-pattern>/SelectTable</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>InsertEmployee</servlet-name>
         <url-pattern>/InsertEmployee</url-pattern>
@@ -34,5 +46,4 @@
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
-
 </web-app>

@@ -13,6 +13,9 @@
     <title>Employee List</title>
 </head>
 <body>
+<form method="post" action="SelectTable">
+    <input type="submit" value="Back">
+</form>
     <table>
         <th>ID</th>
         <th>Name</th>
@@ -29,8 +32,8 @@
             </tr>
         </c:forEach>
     </table>
-<form method="post" action="InsertEmployee">
-    <input type="submit" value="Insert">
-</form>
+    <form method="post" action="InsertEmployee">
+        <input type="submit" value="Insert">
+    </form>
 </body>
 </html>

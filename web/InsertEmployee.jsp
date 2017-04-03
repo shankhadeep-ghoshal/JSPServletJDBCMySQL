@@ -17,6 +17,7 @@
     <title>Insert Employee Record</title>
 </head>
 <body>
+<h3>Please leave subjectid empty if the concerned personnel isn't a teacher</h3>
     <form action="ServletInsertEmployee" method="post">
         Name: <input type="text" name="name"><br>
         Job Designation: <input type="text" name="JD"><br>
@@ -26,6 +27,7 @@
     </form>
 
     <div align="right">
+        <h3>Course list</h3>
         <%
             Connection connection = DBConnection.connect(ServletLogin.username,ServletLogin.password);
             try{
