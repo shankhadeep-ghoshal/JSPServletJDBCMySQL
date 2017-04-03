@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>ServletPackage.ServletLogin</servlet-name>
+        <servlet-class>ServletPackage.ServletLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletPackage.ServletEmployee</servlet-name>
+        <servlet-class>ServletPackage.ServletEmployee</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InsertEmployee</servlet-name>
+        <jsp-file>/InsertEmployee.jsp</jsp-file>
+        <init-param>
+            <param-name>Ins</param-name>
+            <param-value></param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertEmployee</servlet-name>
+        <url-pattern>/InsertEmployee</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPackage.ServletLogin</servlet-name>
+        <url-pattern>/ServletLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPackage.ServletEmployee</servlet-name>
+        <url-pattern>/ServletEmployee</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+</web-app>
