@@ -9,7 +9,7 @@
     </servlet>
     <servlet>
         <servlet-name>ServletPackage.ServletEmployee</servlet-name>
-        <servlet-class>ServletPackage.ServletEmployee</servlet-class>
+        <servlet-class>ServletPackage.EmployeeServletPackage.ServletEmployee</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>InsertEmployee</servlet-name>
@@ -27,6 +27,30 @@
             <param-value> </param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>ServletPackage.ServletInsertEmployee</servlet-name>
+        <servlet-class>ServletPackage.EmployeeServletPackage.ServletInsertEmployee</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletPackage.ServletUpdate</servlet-name>
+        <servlet-class>ServletPackage.EmployeeServletPackage.ServletEmployeeUpdate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletPackage.ServletEmployeeDelete</servlet-name>
+        <servlet-class>ServletPackage.EmployeeServletPackage.ServletEmployeeDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletPackage.ServletEmployeeDelete</servlet-name>
+        <url-pattern>/ServletEmployeeDelete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPackage.ServletUpdate</servlet-name>
+        <url-pattern>/ServletUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPackage.ServletInsertEmployee</servlet-name>
+        <url-pattern>/ServletInsertEmployee</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SelectTable</servlet-name>
         <url-pattern>/SelectTable</url-pattern>

@@ -11,21 +11,25 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%=config.getInitParameter("Ins")%>
+<%config.getInitParameter("Ins");%>
 <html>
 <head>
     <title>Insert Employee Record</title>
 </head>
 <body>
 <h3>Please leave subjectid empty if the concerned personnel isn't a teacher</h3>
-    <form action="ServletInsertEmployee" method="post">
-        Name: <input type="text" name="name"><br>
-        Job Designation: <input type="text" name="JD"><br>
-        Subject ID: <input type="text" name="SID"><br>
-        Salary: <input type="text" name="salary"><br>
-        <input type="submit" value="Submit">
+    <form action="ServletEmployee" method="get">
+        <input type="submit" value="Back">
     </form>
-
+    <div>
+        <form action="ServletInsertEmployee" method="post">
+            Name: <input type="text" name="name"><br>
+            Job Designation: <input type="text" name="job"><br>
+            Subject ID: <input type="text" name="subjectID"><br>
+            Salary: <input type="text" name="salary"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
     <div align="right">
         <h3>Course list</h3>
         <%
