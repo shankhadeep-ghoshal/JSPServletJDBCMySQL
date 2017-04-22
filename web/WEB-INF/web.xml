@@ -39,6 +39,26 @@
         <servlet-name>ServletPackage.ServletEmployeeDelete</servlet-name>
         <servlet-class>ServletPackage.EmployeeServletPackage.ServletEmployeeDelete</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletPackage.EmployeeServletPackage.ServletSH1</servlet-name>
+        <servlet-class>ServletPackage.SH1ServletPackage.ServletSH1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InsertSH1</servlet-name>
+        <jsp-file>/Pages/InsertSH1.jsp</jsp-file>
+        <init-param>
+            <param-name>InsertSH1</param-name>
+            <param-value> </param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertSH1</servlet-name>
+        <url-pattern>/InsertSH1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPackage.EmployeeServletPackage.ServletSH1</servlet-name>
+        <url-pattern>/ServletSH1</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletPackage.ServletEmployeeDelete</servlet-name>
         <url-pattern>/ServletEmployeeDelete</url-pattern>

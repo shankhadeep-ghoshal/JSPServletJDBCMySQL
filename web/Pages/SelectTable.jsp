@@ -15,7 +15,7 @@
     <form method="get" action="ServletEmployee">
         <input type="submit" value="Employee">
     </form>
-    <form method="post" action="">
+    <form method="get" action="ServletSH1">
         <input type="submit" value="SH1">
     </form>
 </body>

@@ -23,7 +23,7 @@ public class ServletInsertEmployee extends HttpServlet {
     }
     private void insert_record(HttpServletRequest request,HttpServletResponse response){
         String query = "INSERT INTO `dogpatch06`.`employee`(ID,Name,Job_Designation,`Subject ID`,Salary)" +
-                "VALUES(?,?,?,?,?);";
+        "VALUES(?,?,?,?,?);";
         String name,Job;int ID=0,salary,subjectID;
 
         Connection connection = DBConnection.connect(ServletLogin.username,ServletLogin.password);
