@@ -40,7 +40,7 @@
         <servlet-class>ServletPackage.EmployeeServletPackage.ServletEmployeeDelete</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ServletPackage.EmployeeServletPackage.ServletSH1</servlet-name>
+        <servlet-name>ServletPackage.SH1ServletPackage.ServletSH1</servlet-name>
         <servlet-class>ServletPackage.SH1ServletPackage.ServletSH1</servlet-class>
     </servlet>
     <servlet>
@@ -51,12 +51,20 @@
             <param-value> </param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>ServletPackage.SH1ServletPackage.ServletInsertSH1</servlet-name>
+        <servlet-class>ServletPackage.SH1ServletPackage.ServletInsertSH1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletPackage.SH1ServletPackage.ServletInsertSH1</servlet-name>
+        <url-pattern>/ServletInsertSH1</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>InsertSH1</servlet-name>
         <url-pattern>/InsertSH1</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ServletPackage.EmployeeServletPackage.ServletSH1</servlet-name>
+        <servlet-name>ServletPackage.SH1ServletPackage.ServletSH1</servlet-name>
         <url-pattern>/ServletSH1</url-pattern>
     </servlet-mapping>
     <servlet-mapping>

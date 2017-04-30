@@ -10,7 +10,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%config.getInitParameter("InsertSH1");%>
+<%config.getInitParameter("ServletInsertSH1");%>
 <%
     ArrayList<String> det = new ArrayList<>();
     det.add(ServletLogin.username);det.add(ServletLogin.password);
@@ -23,16 +23,16 @@
 </head>
 <body>
     <div>
-        <form method="post" action="">
-            First Name:             <input type="text" name="0"><br>
-            Last Name:              <input type="text" name="1"><br>
-            Physics Marks:          <input type="text" name="2"><br>
-            Chemistry Marks:        <input type="text" name="3"><br>
-            Maths Marks:            <input type="text" name="4"><br>
-            Physics Teacher ID:     <input type="text" name="5"><br>
-            Chemistry Teacher ID:   <input type="text" name="6"><br>
-            Maths Teacher ID:       <input type="text" name="7"><br>
-            Coordinator ID:         <input type="text" name="8"><br>
+        <form method="post" action="ServletInsertSH1">
+            First Name:             <input type="text" name="1"><br>
+            Last Name:              <input type="text" name="2"><br>
+            Physics Marks:          <input type="text" name="3"><br>
+            Chemistry Marks:        <input type="text" name="4"><br>
+            Maths Marks:            <input type="text" name="5"><br>
+            Physics Teacher ID:     <input type="text" name="6"><br>
+            Chemistry Teacher ID:   <input type="text" name="7"><br>
+            Maths Teacher ID:       <input type="text" name="8"><br>
+            Coordinator ID:         <input type="text" name="9"><br>
             <input type="submit" value="Insert Record"><br>
         </form>
     </div>
