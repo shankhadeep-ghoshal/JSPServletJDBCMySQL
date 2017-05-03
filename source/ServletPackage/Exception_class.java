@@ -12,9 +12,9 @@ import java.sql.SQLException;
  * Created by Echo01 on 4/7/2017.
  */
 public class Exception_class extends HttpServlet {
-    public static void exception_method(Throwable e, String url, HttpServletResponse response) {
+    public static void exception_method(Throwable e, HttpServletResponse response) {
         try {
-            response.getWriter().print("<h3>"+e.getMessage()+"</h3>");
+            response.sendError(500,e.getMessage());
         } catch (IOException e1) {
             e1.printStackTrace();
         }

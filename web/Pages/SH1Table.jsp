@@ -61,8 +61,11 @@
             Maths Teacher ID:       <input type="text" id="mid" name="mid" disabled><br>
             Co-Ordinator ID:        <input type="text" id="tid" name="tid" disabled><br>
             <button formmethod="post" formaction="InsertSH1" value="Insert">Insert</button>
-            <button formaction="" formmethod="post" id="updateBtn" value="Update" disabled>Update</button>
-            <button formaction="" formmethod="post" id="del" value="Delete" disabled>Delete</button>
+            <button formmethod="post" formaction="ServletSH1" id="updateBtn" value="Update" name="Button"
+                    disabled>Update
+            </button>
+            <button formmethod="post" formaction="ServletSH1" id="del" value="Delete" name="Button" disabled>Delete
+            </button>
         </form>
     </div>
 

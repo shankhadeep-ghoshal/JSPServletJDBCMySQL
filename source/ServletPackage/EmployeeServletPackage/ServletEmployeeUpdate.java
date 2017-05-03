@@ -39,7 +39,7 @@ public class ServletEmployeeUpdate extends HttpServlet {
             response.sendRedirect("/ServletEmployee");
         } catch (SQLException e) {
             e.printStackTrace();
-            Exception_class.exception_method(e,"/ServletEmployee",response);
+            Exception_class.exception_method(e,response);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

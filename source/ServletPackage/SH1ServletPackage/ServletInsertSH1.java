@@ -28,9 +28,7 @@ public class ServletInsertSH1 extends HttpServlet{
             list[i]=request.getParameter(String.valueOf(i));
         }
         Connection connection = DBConnection.connect(ServletLogin.username,ServletLogin.password);
-        String query = "INSERT INTO `dogpatch06`.`SH1`(`ID`,`First Name`,`Last Name`,`Physics`,`Chemistry`,`Maths`,`Physics " +
-                "Teacher ID" +
-                "`,`Chemistry Teacher ID`,`Maths Teacher ID`,`Co-Ordinator ID`) " +
+        String query = "INSERT INTO `dogpatch06`.`SH1`"+
                 "VALUES" +
                 "(?,?,?," +
                 "?," +
@@ -53,9 +51,9 @@ public class ServletInsertSH1 extends HttpServlet{
             pst.executeUpdate();
             response.sendRedirect("/InsertSH1");
         }catch (SQLException e){
-            Exception_class.exception_method(e,"/InsertSH1",response);
+            Exception_class.exception_method(e,response);
         } catch (IOException e) {
-            Exception_class.exception_method(e,"/InsertSH1",response);
+            Exception_class.exception_method(e,response);
         }finally {
             Exception_class.close_connection(connection);
         }

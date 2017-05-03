@@ -13,6 +13,7 @@
 
 <head>
     <title>Employee List</title>
+    <script language="JavaScript1.5" type="text/javascript" src="Scripts/EmployeeCleanup.js"></script>
 </head>
 <body>
 <form method="get" action="SelectTable">
@@ -45,41 +46,10 @@
         <button formaction="ServletEmployeeDelete" formmethod="post" id="del" disabled>Delete</button>
     </form>
     <script type="text/javascript" language="JavaScript">
-        var table = document.getElementById('employeeT'),
-            inputHash = {
-            '0':'idField','1':'nameField','2':'jobField','3':'subjectidField','4':'salaryField'
-        };
-        for ( var i in inputHash )
-            inputHash[ i ] = document.getElementById( inputHash[ i ] );
-
-        table.addEventListener( 'click', function( evt ) {
-            var target = evt.target;
-            document.getElementById('updateBtn').removeAttribute('disabled');
-            document.getElementById('del').removeAttribute('disabled');
-            if ( target.nodeName != 'TD' )
-                return;
-
-            var columns = target.parentNode.getElementsByTagName( 'td' );
-
-            for ( var i = columns.length; i-- ; )
-                inputHash[ i ].value = columns[ i ].innerHTML;
-
-            for(var i in inputHash){
-                inputHash[i].removeAttribute('disabled');
-            }
-        });
+        move_elements();
     </script>
     <script type="text/javascript" language="JavaScript">
-        window.addEventListener("beforeunload",function (event) {
-            var inHash= {'0':'idField','1':'nameField','2':'jobField','3':'subjectidField','4':'salaryField'};
-            for(var i in inHash)inHash[i]=document.getElementById(inHash[i]);
-            for(var i in inHash){
-                inHash[i].value="";
-                inHash[i].disabled=true;
-            }
-            document.getElementById('updateBtn').disabled = true;
-            document.getElementById('del').disabled = true;
-        });
+        cleanup();
     </script>
 </body>
 </html>

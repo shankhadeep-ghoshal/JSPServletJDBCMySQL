@@ -44,7 +44,7 @@ public class ServletInsertEmployee extends HttpServlet {
             preparedStatement.executeUpdate();
             response.sendRedirect("/InsertEmployee");return;
         } catch (SQLException e) {
-            Exception_class.exception_method(e,"/InsertEmployee",response);
+            Exception_class.exception_method(e,response);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
